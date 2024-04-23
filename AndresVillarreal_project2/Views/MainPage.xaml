@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndresVillarreal_project2.Views.MainPage"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:m="clr-namespace:AndresVillarreal_project2.Models"
+             xmlns:vm="clr-namespace:AndresVillarreal_project2.ViewModels"
+             x:DataType="vm:MainViewModel"
+             Title="{Binding Title}">
+
+    <ContentPage.Behaviors>
+        <mct:EventToCommandBehavior Command="{Binding AppearingCommand}" EventName="Appearing" />
+    </ContentPage.Behaviors>
+
+    <ScrollView>
+        <Grid ColumnDefinitions="*, *"
+          RowDefinitions="Auto, *, Auto"
+          Padding="10"
+          RowSpacing="10">
+
+            <ActivityIndicator x:Name="Loading" Grid.Row="1" Grid.ColumnSpan="2" 
+            HeightRequest="100" WidthRequest="100" IsRunning="{Binding IsBusy}" />
+
+            <Label Text="Filter By Province"
+               Grid.Column="0"
+               Margin="10"
+               VerticalOptions="Center" />
+
+            <Picker x:Name="ddlProvinces" Grid.Column="1"
+                VerticalOptions="Center"
+                ItemsSource="{Binding Provinces}"
+                SelectedItem="{Binding SelectedProvince, Mode=TwoWay}"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedIndex="{Binding DDLProvinceSelectedIndex, Mode=TwoWay}">
+
+            </Picker>
+
+            <ListView Grid.Row="1" Grid.ColumnSpan="2" Margin="15,0,10,0"
+                ItemsSource="{Binding Cities}"
+                SelectedItem="{Binding SelectedCity, Mode=TwoWay}"
+                SelectionMode="Single"
+                x:Name="PatientList">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="{x:Type m:City}">
+                        <TextCell Text="{Binding Name}" Detail="{Binding Province.Code}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="8"
+            Command="{Binding RefreshDataCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            Style="{StaticResource ButtonOutline}"
+            Text="Refresh Data" />
+
+            <Button
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="8"
+            Command="{Binding AddCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            Style="{StaticResource Button}"
+            Text="Add City" />
+
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

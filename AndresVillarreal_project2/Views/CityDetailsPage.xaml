@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndresVillarreal_project2.Views.CityDetailsPage"
+             
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:m="clr-namespace:AndresVillarreal_project2.Models"
+             xmlns:vm="clr-namespace:AndresVillarreal_project2.ViewModels"
+             x:DataType="vm:CityDetailsViewModel"
+             
+             Title="{Binding Title}">
+
+    <ContentPage.Behaviors>
+        <mct:EventToCommandBehavior Command="{Binding AppearingCommand}" EventName="Appearing" />
+    </ContentPage.Behaviors>
+
+    <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand" >
+        <VerticalStackLayout HorizontalOptions="FillAndExpand" 
+                     BackgroundColor="#FFF" 
+                     Margin="20,5,20,5" 
+                     Padding="15,10,15,10">
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="City Name:" WidthRequest="120"  VerticalOptions="Center" />
+                <Entry x:Name="txtFirstName" Text="{Binding City.Name}" WidthRequest="200"  />
+            </StackLayout>
+            
+           
+            
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Province:" WidthRequest="120"  VerticalOptions="Center" />
+                <Picker x:Name="ddlProvinces" WidthRequest="200"
+                    ItemsSource="{Binding Provinces,Mode=TwoWay}"
+                    SelectedItem="{Binding SelectedProvince, Mode=TwoWay}"
+                    ItemDisplayBinding="{Binding Name}"  
+                    SelectedIndex="{Binding SelectedProvinceIndex}"
+                    VerticalOptions="Center">
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" >
+                <Button Text="Save" Command="{Binding SaveCommand}"  Margin="5,5,5,5" />
+                <Button Text="Cancel" Command="{Binding CancelCommand}" Margin="5,5,5,5" />
+                <Button x:Name="btnDelete" IsVisible="{Binding Editing}" Text="Delete" Command="{Binding DeleteCommand}"  Margin="5,5,5,5" />
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

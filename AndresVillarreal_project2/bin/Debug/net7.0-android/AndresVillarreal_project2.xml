@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AndresVillarreal_project2</name>
+    </assembly>
+    <members>
+        <member name="T:AndresVillarreal_project2.ViewModels.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.BaseViewModel._IsBusy"/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.BaseViewModel.Title">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.BaseViewModel._Title"/>
+        </member>
+        <member name="T:AndresVillarreal_project2.ViewModels.CityDetailsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.Provinces">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.CityDetailsViewModel._Provinces"/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.City">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.CityDetailsViewModel._City"/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.SelectedProvince">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.CityDetailsViewModel._SelectedProvince"/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.SelectedProvinceIndex">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.CityDetailsViewModel._SelectedProvinceIndex"/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.Editing">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.CityDetailsViewModel._Editing"/>
+        </member>
+        <member name="F:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.Appearing"/>.</summary>
+        </member>
+        <member name="F:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.saveCommand">
+            <summary>The backing field for <see cref="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.Save"/>.</summary>
+        </member>
+        <member name="F:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.deleteCommand">
+            <summary>The backing field for <see cref="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.Delete"/>.</summary>
+        </member>
+        <member name="F:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AndresVillarreal_project2.ViewModels.CityDetailsViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:AndresVillarreal_project2.ViewModels.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.MainViewModel.Cities">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.MainViewModel._Cities"/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.MainViewModel.Provinces">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.MainViewModel._Provinces"/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.MainViewModel.NeedCityRefresh">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.MainViewModel._NeedCityRefresh"/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.MainViewModel.DDLProvinceSelectedIndex">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.MainViewModel._DDLProvinceSelectedIndex"/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.MainViewModel.SelectedProvince">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.MainViewModel._SelectedProvince"/>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.MainViewModel.SelectedCity">
+            <inheritdoc cref="F:AndresVillarreal_project2.ViewModels.MainViewModel._SelectedCity"/>
+        </member>
+        <member name="M:AndresVillarreal_project2.ViewModels.MainViewModel.OnSelectedProvinceChanged(AndresVillarreal_project2.Models.Province)">
+            <summary>Executes the logic for when <see cref="P:AndresVillarreal_project2.ViewModels.MainViewModel.SelectedProvince"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AndresVillarreal_project2.ViewModels.MainViewModel.SelectedProvince"/> is changed.</remarks>
+        </member>
+        <member name="M:AndresVillarreal_project2.ViewModels.MainViewModel.OnSelectedCityChanged(AndresVillarreal_project2.Models.City)">
+            <summary>Executes the logic for when <see cref="P:AndresVillarreal_project2.ViewModels.MainViewModel.SelectedCity"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:AndresVillarreal_project2.ViewModels.MainViewModel.SelectedCity"/> is changed.</remarks>
+        </member>
+        <member name="F:AndresVillarreal_project2.ViewModels.MainViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:AndresVillarreal_project2.ViewModels.MainViewModel.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.MainViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AndresVillarreal_project2.ViewModels.MainViewModel.Appearing"/>.</summary>
+        </member>
+        <member name="F:AndresVillarreal_project2.ViewModels.MainViewModel.addCommand">
+            <summary>The backing field for <see cref="P:AndresVillarreal_project2.ViewModels.MainViewModel.AddCommand"/>.</summary>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.MainViewModel.AddCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AndresVillarreal_project2.ViewModels.MainViewModel.Add"/>.</summary>
+        </member>
+        <member name="F:AndresVillarreal_project2.ViewModels.MainViewModel.showCitiesCommand">
+            <summary>The backing field for <see cref="P:AndresVillarreal_project2.ViewModels.MainViewModel.ShowCitiesCommand"/>.</summary>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.MainViewModel.ShowCitiesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AndresVillarreal_project2.ViewModels.MainViewModel.ShowCities(System.Nullable{System.Int32})"/>.</summary>
+        </member>
+        <member name="F:AndresVillarreal_project2.ViewModels.MainViewModel.refreshDataCommand">
+            <summary>The backing field for <see cref="P:AndresVillarreal_project2.ViewModels.MainViewModel.RefreshDataCommand"/>.</summary>
+        </member>
+        <member name="P:AndresVillarreal_project2.ViewModels.MainViewModel.RefreshDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AndresVillarreal_project2.ViewModels.MainViewModel.RefreshData"/>.</summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Provinces">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Provinces" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.City">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "City" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedProvince">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedProvince" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedProvinceIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedProvinceIndex" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Editing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Editing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Cities">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Cities" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NeedCityRefresh">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NeedCityRefresh" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DDLProvinceSelectedIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DDLProvinceSelectedIndex" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedCity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedCity" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsNotBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsNotBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Provinces">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Provinces" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.City">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "City" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedProvince">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedProvince" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedProvinceIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedProvinceIndex" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Editing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Editing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Cities">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Cities" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NeedCityRefresh">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NeedCityRefresh" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DDLProvinceSelectedIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DDLProvinceSelectedIndex" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedCity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedCity" generated properties.</summary>
+        </member>
+    </members>
+</doc>
